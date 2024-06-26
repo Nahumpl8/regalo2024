@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rally 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: #ff8a8a;
+        }
+        .pista{
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .pista h4{
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .pista p{
+            font-size: 16px;
+            color: #333;
+            text-align: justify;
+            margin: 20px 0;
+        }
+
+        .img-winnie{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-winnie img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        strong{
+            display: none;
+        }
+
+        select{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        select:focus{
+            border: 1px solid #ff8a8a;
+        }
+
+        select option{
+            padding: 10px;
+        }
+
+        select option:hover{
+            background-color: #ff8a8a;
+            color: #fff;
+        }
+
+        select option:checked{
+            background-color: #ff8a8a;
+            color: #fff;
+        }
+
+        select option:checked:hover{
+            background-color: #ff8a8a;
+            color: #fff;
+        }
+
+        select option:hover{
+            background-color: #ff8a8a;
+            color: #fff;
+        }
+
+        select option:checked{
+            background-color: #ff8a8a;
+            color: #fff;
+        }
+
+        .escondido{
+            display: none;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="pista">
+        <h4>Siguiente pista 🥰</h4>
+        <p>
+            Lo encontrasteeee mi niña hermosa!! 🥳🥳 verdad que estuvo muy fácil? Espero que te haya gustado este regalo mi amor, es un pequeño detalle, se que cuando estabamos en Madrid tenías mucho antojo de esto y además podrás acompañar tu recorrido con ellos jiji me guardas eeeh 🤪
+        </p>
+        <p>
+            Ahora, vamos a la siguiente parada, te llevaré a un lugar al que hemos ido juntos los dos, hemos comido ahí y las pesonas de esa casa nos quieren mucho jiji ahí te dejaré tu siguiente regalo 🥰
+        </p>
+        <p>Pero antes, si quieres otra pista <strong>otra pregunta jiji </strong> </p>
+        <p>¿Cuantas veces me han operado?</p>
+        <p>Si no lo sabes, puedes preguntarle a winnie 🤪</p>
+        <p>Si lo sabes, elije la respuesta correcta </p>
+        <select name="fechas" id="primera-pregunta">
+            <option value="cero">cero</option>
+            <option value="seis">seis</option>
+            <option value="catorce">catorce</option>
+            <option value="cuatro">cuatro</option>
+            <option value="dos">dos</option>
+            <option value="tres">tres</option>
+        </select>
+        <h4>Pista:</h4>
+        <p>
+            <strong class="escondido">Si quieres encontrar tu segundo regalo, tendrás que ir a casa de unas pesonas que te quieren mucho, son 4 y un perrito, 2 hombres y 2 mujeres, está muy fácil no mi chiquita?</strong>
+        </p>
+        <div class="img-winnie">
+            <img src="./imagenes/goya1.png" alt="winnie">
+        </div>
+        <p>
+            Anque Goa ya no está con nosotros estoy seguro que ella ama verte feliz desde el cielo y algún día volveremos a estar todos juntos 💙
+        </p>
+    </div>
+
+    
+    <script>
+        const select = document.getElementById('primera-pregunta');
+        select.addEventListener('change', (e) => {
+            const respuesta = e.target.value;
+            if(respuesta === 'dos'){
+                document.querySelector('.escondido').style.display = 'block';
+            }else{
+                alert('Respuesta incorrecta, sigue intentando 😡');
+            }
+        });
+    </script>
+</body>
+</html>
